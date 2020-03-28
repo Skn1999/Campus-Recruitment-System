@@ -1,0 +1,219 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@font-face{
+    font-family: 'Avenir';
+    src: local('AvenirNextLTPro-Bold'), url(/fonts/AvenirNextLTPro-Bold.otf) format('opentype');
+}
+
+.container{
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.bgImg {
+    background-image: url(assets/bg.png);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.root{
+    flex-grow: 1;
+};
+
+.navbar {
+   background: transparent;
+    box-shadow: none;
+    min-height: 100px;
+    justify-content: center;
+    position: static;
+    transform: translateZ(0);
+    width: 100%;
+    display: flex;
+    z-index: 1100;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.justifyCenter {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.title{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.whiteColor{
+    color: white;
+}
+
+.whiteText {
+    color: white;
+}
+.bold {
+    font-weight: bolder;
+}
+
+.gray {
+    color: #7a7a7a;
+    &::after{
+        background: #7a7a7a;
+    }
+}
+
+.roleBg {
+    background : url("/assets/role.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  
+
+  
+  .primary-font{
+    font-family: Avenir, sans-serif;
+    
+  }
+  
+  .hero-heading{
+    font-size: 50px;
+    color: white;
+  }
+
+  .white-text{
+    color: white;
+  }
+  
+  .wrapper{
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 100%;
+  }
+  
+  .paper{
+    width: 70%;
+    box-shadow: 0 10px 30px -5px rgba(54, 202, 142, .16);
+
+  }
+  
+  .heading{
+    font-family: Avenir, sans-serif;
+    font-size: 2rem;
+    color: #6c63ff;
+    position: relative;
+    letter-spacing: 1px;
+    line-height: 1.4;
+  }
+  
+  .heading::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 5px;
+    background: #6c63ff;
+    margin-top: 10px;
+  }
+  
+  .sub-heading{
+    font-family: Avenir, sans-serif;
+    font-size: 1.05rem;
+    color: #707070;
+    width: 80%;
+    letter-spacing: 1px;
+  }
+  
+  .para{
+    font-family: Roboto, sans-serif;
+    font-size: 1rem;
+    opacity: .8;
+    letter-spacing: 2.5;
+    line-height: 1.4;
+    color: #707070;
+  }
+  
+  .link{
+    font-family: Roboto, sans-serif;
+    font-size: 1rem;
+    opacity: .8;
+    text-transform: uppercase;
+    letter-spacing: 2.5;
+    color: #36CA8E;
+    text-decoration: none;
+  }
+  
+  .link:hover{
+    text-decoration: underline;
+  }
+  
+  .img {
+    width: 60%;
+    height: 60%;
+    margin-left: 5rem;
+  }
+  
+  
+  /* FOOTER */
+  
+  .footer{
+    height: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+  }
+  
+  .form{
+    display: flex;
+    width: 100%;
+  }
+  
+  .form-control{
+    border: none;
+    outline: none;
+    box-shadow: 0 0 20px rgba(54, 202, 142, .16);
+    padding: 10px 15px;
+    width: 50%;
+  } 
+  
+  .form-btn{
+    font-family: Avenir, sans-serif;
+    font-family: .8rem;
+    border: none;
+    outline: none;
+    background: #6c63ff;
+    color: white;
+    padding: 8px 20px;
+    margin-left: 1rem;
+  }
+  
+  
