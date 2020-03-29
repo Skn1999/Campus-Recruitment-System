@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('navbar');
-});
+//controller for Company
+
+Route::resource('/company', 'CompanyController');
+
+//Controller for Institute
+
+Route::resource('/institute', 'InstituteController');

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);
 
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
@@ -575,11 +575,10 @@ pre code {
 }
 
 .container {
-  width: 100%;
+  width: 80%;
   padding-right: 15px;
   padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
 }
 
 @media (min-width: 576px) {
@@ -10906,6 +10905,17 @@ a.text-dark:focus {
   background-size: cover;
 }
 
+.person-bg{
+  background-image: url(/assets/signup.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: inherit;
+}
+
+.grayBg {
+  background: #EDF1F4;
+}
+
 .root {
   flex-grow: 1;
 }
@@ -10941,7 +10951,7 @@ a.text-dark:focus {
 }
 
 .whiteText {
-  color: white;
+  color: white !important;
 }
 
 .bold {
@@ -10980,7 +10990,14 @@ a.text-dark:focus {
 }
 
 .white-text {
-  color: white;
+  color: white !important;
+}
+
+#space-between{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between !important;
+  height: 100% !important;
 }
 
 .wrapper {
@@ -10992,7 +11009,7 @@ a.text-dark:focus {
 }
 
 .paper {
-  width: 70%;
+  width: 60%;
   box-shadow: 0 10px 30px -5px rgba(54, 202, 142, 0.16);
 }
 
@@ -11001,7 +11018,6 @@ a.text-dark:focus {
   font-size: 2rem;
   color: #6c63ff;
   position: relative;
-  letter-spacing: 1px;
   line-height: 1.4;
 }
 
@@ -11030,6 +11046,7 @@ a.text-dark:focus {
   letter-spacing: 2.5;
   line-height: 1.4;
   color: #707070;
+  font-weight: 400;
 }
 
 .link {
@@ -11047,44 +11064,10 @@ a.text-dark:focus {
 }
 
 .img {
-  width: 60%;
-  height: 60%;
-  margin-left: 5rem;
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
 }
 
-/* FOOTER */
 
-.footer {
-  height: 350px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5rem;
-}
-
-.form {
-  display: flex;
-  width: 100%;
-}
-
-.form-control {
-  border: none;
-  outline: none;
-  box-shadow: 0 0 20px rgba(54, 202, 142, 0.16);
-  padding: 10px 15px;
-  width: 50%;
-}
-
-.form-btn {
-  font-family: Avenir, sans-serif;
-  font-family: 0.8rem;
-  border: none;
-  outline: none;
-  background: #6c63ff;
-  color: white;
-  padding: 8px 20px;
-  margin-left: 1rem;
-}
 
