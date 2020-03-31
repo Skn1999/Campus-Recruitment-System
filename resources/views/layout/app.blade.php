@@ -21,7 +21,7 @@
         <div id="dw-s2" class="bmd-layout-drawer bg-faded sideDrawer ">
           <div>
             <img src="/assets/blue-logo.png" alt="hired.">
-            <p class="orgName">XYZ Company</p>
+            <p class="orgName">@yield('org-name')</p>
           </div>
           <div>
               <button class="btn" >Log Out <img class="logOutBtn" src="/assets/back-arrow.svg" alt=""> </button>

@@ -1,4 +1,7 @@
 @extends('layout.app')
+
+@section('org-name', 'Lovely Professional University')
+
 @section('content')
     <div class="row">
         <div class="main col-sm-8" >
