@@ -24,18 +24,19 @@ class LoginMiddleware
 
         if($request->type == 'company'){
             $row = Company::where('email', $request->email)->get();
+            $request->attributes->add(['type' => 'company']);
         }
         else if($request->type == 'institute'){
             $row = Institute::where('email', $request->email)->get();
+            $request->attributes->add(['type' => 'institute']);
         }
         
-        if( !empty($row) && $row[0]->password == $request->password){
-            $request->merge(array("data" => $row) );
+        if( count($row) != 0 && $row[0]->password == $request->password){
+            $request->attributes->add(['data' => $row]);
             return $next($request);
         }
         else{
-            $request->merge(array("errors" => "No user found"));
-            return $next($request);
+            return redirect("/login")->with("error", "No such user found. Try registering or check your username and password again.");
         }
     }
 }

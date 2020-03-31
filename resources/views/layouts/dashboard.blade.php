@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CRS</title>
+    <link rel="stylesheet" href="/css/app.css">
     {{-- Carousel CSS --}}
     <link rel="stylesheet" href="/css/carousel/dist/assets/owl.carousel.css">
     <link rel="stylesheet" href="/css/carousel/dist/assets/owl.theme.default.min.css">
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/css/company.css">
+    
 </head>
 <body>
 
@@ -24,7 +26,7 @@
             <p class="orgName">@yield('org-name')</p>
           </div>
           <div>
-              <button class="btn" >Log Out <img class="logOutBtn" src="/assets/back-arrow.svg" alt=""> </button>
+              <a href="/login"> <button class="btn" >Log Out <img class="logOutBtn" src="/assets/back-arrow.svg" alt=""> </button></a>
           </div>
         </div>
         <main class="bmd-layout-content">

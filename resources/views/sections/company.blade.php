@@ -1,6 +1,8 @@
 @extends('layouts.dashboard')
 
-@section('org-name', 'XYZ Company')
+@section('org-name')
+    <h3> {{ $data['name']}} <h3>
+@endsection
 
 
 @section('content')
@@ -8,7 +10,7 @@
         <div class="main col-sm-8" >
             <img src="/assets/blue-logo.png" alt="hired."/>
             <div class='contentBlock' >
-                <h4 class="title">DashBoard</h4>
+                <h4 class="sub-heading">DashBoard</h4>
                 <div class="banner">
                     <div>
                         <h2 class="alertTitle">Welcome back!</h2>
@@ -23,7 +25,7 @@
         
             {{-- Pending Jobs --}}
             <div class='contentBlock' >
-                <h4 class="title">Pending</h4>
+                <h4 class="sub-heading">Pending</h4>
                 <div class="owl-carousel owl-theme">
                     @for ($i = 0; $i < 10; $i++)
                         <div class="item">
@@ -50,7 +52,7 @@
         
             {{-- Completed Jobs --}}
             <div class='contentBlock' >
-                <h4 class="title">Completed</h4>
+                <h4 class="sub-heading">Completed</h4>
                 <div class="owl-carousel owl-theme">
                     @for ($i = 0; $i < 10; $i++)
                         <div class="item">

@@ -118,6 +118,7 @@
                     <div class=" mt-5 mb-3 mx-0">
                         <h2 style="text-align: center; margin: auto 0; width:100%" class="sub-heading">Login</h2>
                     </div>
+                    @include('inc.message')
                 </div>
                 <form style="padding: 2rem; height: 500px" name="loginForm" action="/loginForm" method="post">
                     @csrf

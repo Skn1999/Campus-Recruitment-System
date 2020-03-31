@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class CompanyController extends Controller
 {
     function __construct(){
-        $this->middleware('auth')->only(['index', 'show', 'edit', 'update']);
+        $this->middleware('Login')->only(['index', 'show', 'edit', 'update']);
     }
     /**
      * Display a listing of the resource.
@@ -62,9 +62,8 @@ class CompanyController extends Controller
 
         $company->save();
 
-        $row = App\Company::where('email', $request->email)->get();
-        $id = $row->company_id;
-        return redirect('/company/{$id}');
+        //$row = Company::where('email', $request->email)->get();
+        return redirect('/company');
 
     }
 
@@ -77,7 +76,7 @@ class CompanyController extends Controller
     public function show($id)
     {
         //
-        $row = \App\Institute::find($id);
+        $row = App\Company::find($id);
 
         return $row->name;
         

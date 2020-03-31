@@ -62,9 +62,9 @@ class InstituteController extends Controller
 
         $college->save();
 
-        $row = App\Institute::where('email', $request->email)->get();
-        $id = $row->college_id;
-        return redirect('/institute/{$id}');
+        // $row = Institute::where('email', $request->email)->get();
+        // $id = $row->college_id;
+        return redirect('/institute');
 
     }
 
@@ -78,7 +78,7 @@ class InstituteController extends Controller
     {
         //
 
-        $row = \App\Institute::find($id);
+        $row = Institute::find($id);
 
         return view("layouts.dashboard")->with(["data" => $row]);
     }
