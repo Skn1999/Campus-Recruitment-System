@@ -42,7 +42,7 @@ class InstituteController extends Controller
             'name' => 'required',
             'year' => 'digits:4 | after_or_equal:1990 | before_or_equal:2020',
             'affl'=> 'nullable',
-            'email' => 'bail | email | unique:institutes,email',
+            'email' => 'bail | required | email | unique:institutes,email',
             'password' => 'required | min:6 | max:16',
             'cpassword' => 'required | min:6 | max:16 | same:password',
 

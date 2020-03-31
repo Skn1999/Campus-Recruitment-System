@@ -44,22 +44,22 @@
                     @csrf
                     <div class="form-group ">
                         <label for="name">Let's start with the name of the company</label>
-                        <input type="text" class="form-control" name="name" required>
+                        <input type="text" class="form-control" name="name"  value={{ old('name')}}>
                         <span class="text-danger">{{ $errors->first("name")}}</span>
                     </div>
                     <div class="form-group ">
                         <label for="year">The year you got registered</label>
-                        <input type="number" class="form-control" name="year" required>
+                        <input type="number" class="form-control" name="year" value={{ old('year')}} >
                         <span class="text-danger">{{ $errors->first("year")}}</span>
                     </div>
                     <div class="form-group ">
                         <label for="domain">Domain of your company</label>
-                        <input type="text" class="form-control" name="domain" >
+                        <input type="text" class="form-control" name="domain" value={{ old('domain')}} >
                         <span class="text-danger">{{ $errors->first("domain")}}</span>
                     </div>
                     <div class="form-group ">
                         <label for="email">Email of your company</label>
-                        <input type="email" class="form-control" name="email" >
+                        <input type="email" class="form-control" name="email" value={{ old('email')}} >
                         <span class="text-danger">{{ $errors->first("email")}}</span>
                     </div>
                     <div class="form-group ">

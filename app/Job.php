@@ -13,4 +13,8 @@ class Job extends Model
     public $attributes = [
         'location' => null
     ];
+
+    public function company(){
+        return $this->belongsTo("App\Company");
+    }
 }

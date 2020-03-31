@@ -10896,15 +10896,6 @@ a.text-dark:focus {
   padding-right: 24px;
 }
 
-.bgImg {
-  background-image: url(/images/bg.png?bfa6400f626896a6bdb3ec6c90d5e578);
-  height: 100vh;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
 .person-bg{
   background-image: url(/assets/signup.png);
   background-repeat: no-repeat;

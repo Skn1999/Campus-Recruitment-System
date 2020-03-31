@@ -15,6 +15,10 @@ class Company extends Model
         'domain' => null,
     ];
 
+    public function jobs(){
+        return $this->hasMany("App\Job");
+    }
+
     public function setUpdatedAtAttribute($value)
     {
         // to Disable updated_at

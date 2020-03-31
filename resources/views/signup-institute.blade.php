@@ -44,27 +44,32 @@
                     @csrf
                     <div class="form-group ">
                         <label for="name">Let's start with the name of the institute</label>
-                        <input type="text" class="form-control" name="name" required>
+                        <input type="text" class="form-control" name="name"  value={{ old('name')}} >
+                        <span class="text-danger">{{ $errors->first("name")}}</span>
                     </div>
                     <div class="form-group ">
                         <label for="year">Affiliation Number</label>
-                        <input type="number" class="form-control" name="affl">
+                        <input type="number" class="form-control" name="affl" value={{ old('affl')}}>
                     </div>
                     <div class="form-group ">
                         <label for="email">Email of your company</label>
-                        <input type="email" class="form-control" name="email" required >
+                        <input type="email" class="form-control" name="email" value={{ old('email')}} >
+                        <span class="text-danger">{{ $errors->first("email")}}</span>
                     </div>
                     <div class="form-group ">
                         <label for="year">Estb. in?</label>
-                        <input type="number" class="form-control" name="year" required>
+                        <input type="number" class="form-control" name="year" value={{ old('year')}} required>
+                        <span class="text-danger">{{ $errors->first("year")}}</span>
                     </div>
                     <div class="form-group ">
                         <label for="password">Secure password</label>
                         <input type="password" class="form-control" name="password" required>
+                        <span class="text-danger">{{ $errors->first("password")}}</span>
                     </div>
                     <div class="form-group ">
                         <label for="cpassword">Confirm password</label>
                         <input type="password" class="form-control" name="cpassword" required>
+                        <span class="text-danger">{{ $errors->first("cpassword")}}</span>
                     </div>
                     <div class="form-group mt-5">
                         <button type="submit" class=" w-100">Sign up</button>

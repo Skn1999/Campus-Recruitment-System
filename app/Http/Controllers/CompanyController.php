@@ -41,7 +41,7 @@ class CompanyController extends Controller
             'name' => 'required',
             'year' => 'digits:4 | after_or_equal:1990 | before_or_equal:2020',
             'domain'=> 'nullable | regex:/^[a-zA-Z\.-_]+$/i',
-            'email' => 'bail | email | unique:companies,email',
+            'email' => 'bail | required | email | unique:companies,email',
             'password' => 'required | min:6 | max:16',
             'cpassword' => 'required | min:6 | max:16 | same:password',
 
@@ -59,7 +59,9 @@ class CompanyController extends Controller
 
         $company->save();
 
-        return "You are registered now.";
+        $row = App\Company::where('email', $request->email)->get();
+        $id = $row->company_id;
+        return redirect('/company/{$id}');
 
     }
 
@@ -72,6 +74,10 @@ class CompanyController extends Controller
     public function show($id)
     {
         //
+        $row = \App\Institute::find($id);
+
+        return $row->name;
+        
     }
 
     /**
