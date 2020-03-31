@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.dashboard')
 
 @section('org-name', 'Lovely Professional University')
 

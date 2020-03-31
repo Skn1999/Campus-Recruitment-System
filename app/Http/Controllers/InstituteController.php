@@ -7,6 +7,10 @@ use App\Institute;
 
 class InstituteController extends Controller
 {
+
+    function __construct(){
+        $this->middleware('auth')->only(['index', 'show', 'edit', 'update']);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +18,7 @@ class InstituteController extends Controller
      */
     public function index()
     {
-        return view("dashboard.institute");
+        return view("sections.institute");
     }
 
     /**
@@ -76,7 +80,7 @@ class InstituteController extends Controller
 
         $row = \App\Institute::find($id);
 
-        return $row->name;
+        return view("layouts.dashboard")->with(["data" => $row]);
     }
 
     /**

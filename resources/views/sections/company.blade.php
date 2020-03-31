@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.dashboard')
 
 @section('org-name', 'XYZ Company')
 
@@ -98,10 +98,10 @@
                     <label for="" class="bmd-label-floating">Location of the Job</label>
                     <input class="form-control" id="location" name="location" label="" type="text" variant="outlined" >
                 </div>
-                <div class="form-group">
+
                     <label for="" class="bmd-label-floating"></label>
                     <input class="form-control" id="file" name="file" label="" type="file" variant="outlined" >
-                </div>
+                
                 <button type="submit" variant="contained" class="btn btnRoot" >Post job</button>
             </form>
         </div>
