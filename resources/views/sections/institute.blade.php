@@ -37,10 +37,10 @@
                         <div class="item">
                             <div class="jobCard" >
                                 <h2 class="jobtitle"> {{ $job['job_position']}} </h2>
-                                <p>
+                                {{-- <p>
                                     <span class="parameter">Posted by : </span>
                                     <span class="paramValue"></span>
-                                </p>
+                                </p> --}}
                                 <p>
                                     <span class="parameter">Salary : </span>
                                     <span class="paramValue">8 LPA</span>
