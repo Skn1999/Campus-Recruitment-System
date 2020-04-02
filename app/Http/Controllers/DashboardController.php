@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Company;
 
 use Illuminate\Http\Request;
 
@@ -23,6 +24,12 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        $company_id = auth()->user()->id;
+        $company = Company::find($company_id); 
+        $data = [
+            "data" => $company,
+            "jobs" => $company->jobs
+        ];
+        return view('sections.company')->with($data);
     }
 }

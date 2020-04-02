@@ -9,7 +9,7 @@ class InstituteController extends Controller
 {
 
     function __construct(){
-        $this->middleware('auth')->only(['index', 'show', 'edit', 'update']);
+        $this->middleware('auth')->only(['index', 'show', 'update']);
     }
     /**
      * Display a listing of the resource.

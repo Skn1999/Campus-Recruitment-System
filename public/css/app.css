@@ -11004,7 +11004,7 @@ a.text-dark:focus {
   box-shadow: 0 10px 30px -5px rgba(54, 202, 142, 0.16);
 }
 
-.heading {
+.heading, .heading2 {
   font-family: Avenir, sans-serif;
   font-size: 2rem;
   color: #6c63ff;
@@ -11034,7 +11034,6 @@ a.text-dark:focus {
   font-family: Roboto, sans-serif;
   font-size: 1rem;
   opacity: 0.8;
-  letter-spacing: 2.5;
   line-height: 1.4;
   color: #707070;
   font-weight: 400;

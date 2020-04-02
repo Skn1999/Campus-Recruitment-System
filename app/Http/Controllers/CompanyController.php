@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class CompanyController extends Controller
 {
     function __construct(){
-        $this->middleware('Login')->only(['index', 'show', 'edit', 'update']);
+        $this->middleware('auth')->only(['index', 'show']);
     }
     /**
      * Display a listing of the resource.
@@ -16,7 +16,8 @@ class CompanyController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {   
+        //return "This is index function after middleware auth";
         return view("sections.company");
     }
 
@@ -44,7 +45,7 @@ class CompanyController extends Controller
             'name' => 'required',
             'year' => 'digits:4 | after_or_equal:1990 | before_or_equal:2020',
             'domain'=> 'nullable | regex:/^[a-zA-Z\.-_]+$/i',
-            'email' => 'bail | required | email | unique:companies,email',
+            'email' => 'bail | required | email',
             'password' => 'required | min:6 | max:16',
             'cpassword' => 'required | min:6 | max:16 | same:password',
 
@@ -63,7 +64,7 @@ class CompanyController extends Controller
         $company->save();
 
         //$row = Company::where('email', $request->email)->get();
-        return redirect('/company');
+        return redirect('/company')->with("success", "Succesfully registered. You may login now.");
 
     }
 
@@ -91,6 +92,10 @@ class CompanyController extends Controller
     public function edit($id)
     {
         //
+        $company = Company::find($id);
+        return view("editCompany",[
+            "data" => $company
+        ])->with("success", "You may change your information here.");
     }
 
     /**
@@ -103,6 +108,23 @@ class CompanyController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $request->validate([
+            'name' => 'required',
+            'year' => 'digits:4 | after_or_equal:1990 | before_or_equal:2020',
+            'domain'=> 'nullable | regex:/^[a-zA-Z\.-_]+$/i',
+            'email' => 'bail | required | email | unique:companies,email',
+        ]);
+
+        $company = Company::find($id);
+
+        $company->name = $request->name;
+        $company->year = $request->year;
+        $company->domain = $request->domain;
+        $company->email = $request->email;
+
+        $company->save();
+
+        return redirect('sections.company')->with("success", "Profile Information Updated.");
     }
 
     /**

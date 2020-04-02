@@ -26,6 +26,10 @@ Route::resource('/company', 'CompanyController');
 
 Route::resource('/institute', 'InstituteController');
 
+//Controller for jobs 
+Route::post('/job/{company_id}', 'JobController@store');
+Route::get('/job/{job_id}', "JobController@showJob");
+
 Route::get('/login', function () {
     return view("login");
 });
@@ -38,3 +42,8 @@ Route::post('/loginForm', [
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+
+Route::get('test', function () {
+    return view("sections.results");   
+});

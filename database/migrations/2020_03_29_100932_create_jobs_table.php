@@ -16,9 +16,10 @@ class CreateJobsTable extends Migration
         Schema::create('jobs', function (Blueprint $table) {
             $table->smallIncrements('job_id');
             $table->string('job_position');
-            $table->string('eligibilty');
+            $table->string('eligibility');
             $table->tinyInteger('no_of_vacancies')->default(0);
             $table->string('location')->nullable();
+            $table->timestamps();
         });
     }
 
