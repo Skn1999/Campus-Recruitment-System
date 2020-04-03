@@ -33,29 +33,36 @@
             {{-- Pending Jobs --}}
             <div class='contentBlock' >
                 <h4 class="sub-heading">Pending</h4>
-                <div class="owl-carousel owl-theme">
-                    @foreach ( $data['jobs'] as $job)
-                        <div class="item">
-                            <div class="jobCard" >
-                                <h2 class="jobtitle"> {{ $job['job_position']}} </h2>
-                                <p>
-                                    <span class="parameter">Posted by : </span>
-                                    <span class="paramValue">{{ $data['data']->name }}</span>
-                                </p>
-                                <p>
-                                    <span class="parameter">Salary : </span>
-                                    <span class="paramValue">10 LPA</span>
-                                </p>
-                                <a href="/job/{{$job['job_id']}}" class="linkBtn">
-                                    <span class="btn">
-                                        VIEW MORE
-                                    </span>
-                                </a>
+                @if ( count($data['jobs']) > 0)
+                    <div class="owl-carousel owl-theme">
+                        @foreach ( $data['jobs'] as $job)
+                            <div class="item">
+                                <div class="jobCard" >
+                                    <h2 class="jobtitle"> {{ $job['job_position']}} </h2>
+                                    <p>
+                                        <span class="parameter">Posted by : </span>
+                                        <span class="paramValue">{{ $data['data']->name }}</span>
+                                    </p>
+                                    <p>
+                                        <span class="parameter">Salary : </span>
+                                        <span class="paramValue">10 LPA</span>
+                                    </p>
+                                    <a href="/job/{{$job['job_id']}}" class="linkBtn">
+                                        <span class="btn">
+                                            VIEW MORE
+                                        </span>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
+                        
+                    </div>
                     
-                </div>
+                @else
+                    <div class="alert alert-danger para">
+                        No Job posts available yet. Go ahead create one right now with the form given at the side.
+                    </div>
+                @endif
             </div>
         
             {{-- Completed Jobs --}}

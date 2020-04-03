@@ -34,7 +34,7 @@
                 <input type="number" class="form-control" name="affl" value={{ old('affl')}}>
             </div>
             <div class="form-group ">
-                <label for="email">Email of your company</label>
+                <label for="email">Email of your institute</label>
                 <input type="email" class="form-control" name="email" value={{ old('email')}} >
                 <span class="text-danger">{{ $errors->first("email")}}</span>
             </div>

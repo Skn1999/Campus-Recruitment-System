@@ -33,7 +33,7 @@
                 <i class="material-icons">menu</i>
             </button>
           <div class="container-fluid mainContent">
-            @include('inc.message')
+            
             @yield('content')
           </div>
         </main>
@@ -49,7 +49,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
     {{-- Carousel JS --}}
-    {{-- <script src="/jquery-3.4.1.js"></script> --}}
+    
     <script src="/css/carousel/dist/owl.carousel.js"></script>
     <script>
         @yield('script')

@@ -157,7 +157,7 @@
                             </p>
                         </div>
                         <div class=" mt-5 ">
-                            <button inverted>Let's Get Started</button>
+                            <a href="/login"> <button inverted>Let's Get Started</button></a>
                         </div>
                     </div>
                     <div class=" col-sm col-md-5">

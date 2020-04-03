@@ -51,10 +51,11 @@
 
                 <div class="form-group mt-5">
                     <button type="submit" class=" w-100">Sign up</button>
-                </div>
-                
+                </div>      
 
             </form>
+
+            <a href="" class=""><small>Forgot password?</small></a>
         </div>
     </div>
 </div>
